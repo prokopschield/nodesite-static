@@ -1,7 +1,7 @@
 {
     "name": "nodesite-static",
     "description": "fast, static nodesite",
-    "version": "0.1.0-4",
+    "version": "0.1.0-7",
     "main": "lib/index.js",
     "bin": {
         "nodesite-static": "lib/cli.js"
