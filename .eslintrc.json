@@ -1,16 +1,16 @@
 {
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-		"ecmaVersion": 2021
-	},
-	"extends": ["plugin:v3xlabs/recommended"],
-	"ignorePatterns": ["!**/*"],
-	"plugins": ["v3xlabs"],
-	"env": {
-		"node": true
-	},
-	"rules": {
-		"unicorn/prefer-at": "off",
-		"unicorn/prefer-node-protocol": "off"
-	}
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "extends": ["plugin:v3xlabs/recommended"],
+    "ignorePatterns": ["!**/*"],
+    "plugins": ["v3xlabs"],
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "unicorn/prefer-at": "off",
+        "unicorn/prefer-node-protocol": "off"
+    }
 }
