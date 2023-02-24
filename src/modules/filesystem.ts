@@ -228,22 +228,32 @@ export class Directory extends File {
         await lpqueue.promise;
 
         for (const child of await fs.promises.readdir(this.filepath)) {
-            const node = this.getChild(child);
+            try {
+                const node = this.getChild(child);
 
-            await node.read();
+                await node.read();
 
-            const is_directory = node instanceof Directory;
+                const is_directory = node instanceof Directory;
 
-            for (const plugin of plugins) {
-                const source_p = is_directory
-                    ? plugin.loadDirectory(node)
-                    : plugin.loadFile(node);
+                for (const plugin of plugins) {
+                    const source_p = is_directory
+                        ? plugin.loadDirectory(node)
+                        : plugin.loadFile(node);
 
-                const source = await source_p;
+                    const source = await source_p;
 
-                if (source) {
-                    node.source = source;
+                    if (source) {
+                        node.source = source;
+                    }
                 }
+            } catch (error) {
+                console.error(
+                    `Error while loading ${path.resolve(
+                        this.filepath,
+                        child
+                    )}:`,
+                    error
+                );
             }
         }
 
