@@ -1,0 +1,33 @@
+{
+	"name": "nodesite-static",
+	"description": "fast, static nodesite",
+	"version": "0.1.0-4",
+	"main": "lib/index.js",
+	"bin": {
+		"nodesite-static": "lib/cli.js"
+	},
+	"author": "Prokop Schield",
+	"dependencies": {
+		"@prokopschield/argv": "^0.1.3",
+		"highlight.js": "^11.7.0",
+		"mime-types": "^2.1.35",
+		"nodesite.eu": "^1.2.0-36",
+		"nsblob-stream": "^0.1.2",
+		"ps-std": "^0.1.6",
+		"showdown": "^2.1.0"
+	},
+	"devDependencies": {
+		"@types/mime-types": "^2.1.1",
+		"@types/node": ">=16",
+		"@types/showdown": "^2.0.0",
+		"@typescript-eslint/parser": "^5.52.0",
+		"eslint": "^8.34.0",
+		"eslint-plugin-v3xlabs": "^1.5.2",
+		"typescript": "^4.9.5"
+	},
+	"keywords": [],
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"lint": "eslint -c .eslintrc.json --ext .ts ./src"
+	}
+}
